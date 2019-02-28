@@ -23,6 +23,13 @@ describe SurveyResponse do
     end
   end
 
+  describe '#get_score' do
+    let(:survey_response) { create(:survey_response) }
+    it 'totals scores for a given creative quality' do
+      expect(survey_response).get_score("Purpose").to be_kind_of(Numeric)
+    end
+  end
+
   describe '#completed?' do
     let(:survey_response) { build(:survey_response) }
 
