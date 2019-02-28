@@ -23,7 +23,7 @@ describe SurveyResponse do
     end
   end
 
-  describe '#get_score' do
+  describe '#get_scores' do
     let(:survey_response) { create(:survey_response) }
     it 'totals scores for a given creative quality' do
       expect(survey_response).get_scores().to be_kind_of(Array)

@@ -17,7 +17,10 @@
     </div>
 
     <hr>
-    
+      <% @survey_response.answers.each do |answer| %>
+        <h4><%= "#{answer.question_choice.creative_quality.name}: #{answer.question_choice.score}" %></h4>
+      <% end %>
+    <hr>
 
     <% @survey_response.answers.each do |answer| %>
       <%= render 'questions/header', question: answer.question %>
