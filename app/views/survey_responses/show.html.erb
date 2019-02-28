@@ -28,6 +28,9 @@
               <% if question_choice == answer.question_choice %>
                 <strong>
                   <%= question_choice.text %>
+                  <div class="<%= (question_choice.score > 0) ? '.text-success' : '.text-danger' %>">
+                    <%= "#{question_choice.creative_quality.name} #{question_choice.score}" %>
+                  </div>
                 </strong>
               <% else %>
                 <span class="text-muted">
