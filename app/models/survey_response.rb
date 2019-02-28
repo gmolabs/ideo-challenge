@@ -13,4 +13,8 @@ class SurveyResponse < ApplicationRecord
   def completed?
     answers_count == Question.count
   end
+
+  def get_score(quality)
+    return 0
+  end
 end
